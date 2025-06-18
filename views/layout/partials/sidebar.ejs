@@ -1,0 +1,36 @@
+<div class="sidebar bg-dark" id="sidebar">
+  <ul class="nav flex-column px-3">
+    <li class="nav-item mt-5">
+      <a
+        class="nav-link <%= (active === 'dashboard') ? 'active text-white' : 'text-light' %>"
+        href="/dashboard"
+      >
+        <i data-feather="home"></i> Dashboard
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link <%= (active === 'orders') ? 'active text-white' : 'text-light' %>"
+        href="/orders"
+      >
+        <i data-feather="shopping-cart"></i> Orders
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link <%= (active === 'products') ? 'active text-white' : 'text-light' %>"
+        href="/products"
+      >
+        <i data-feather="box"></i> Products
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link <%= (active === 'transactions') ? 'active text-white' : 'text-light' %>"
+        href="/transactions"
+      >
+        <i data-feather="dollar-sign"></i> Transactions
+      </a>
+    </li>
+  </ul>
+</div>

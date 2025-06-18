@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title %></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+
+    <%- include('../layout/partials/navbar') %>
+
+    <!-- Sidebar -->
+    <%- include('../layout/partials/sidebar', { active }) %>
+
+    <!-- Main Content -->
+    <main class="content px-4 pt-5" style="margin-top: 56px">
+      <div
+        class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2"
+      >
+        <h1 class="h2"><%= nama_halaman %></h1>
+      </div>
+      <%- body %>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+
+    <script>
+      feather.replace();
+
+      $("#sidebarToggle").on("click", function () {
+        $("#sidebar").toggleClass("show");
+      });
+
+      $(".sidebar .nav-link").on("click", function () {
+        if (window.innerWidth <= 768) {
+          $("#sidebar").removeClass("show");
+        }
+      });
+    </script>
+  </body>
+</html>

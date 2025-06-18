@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        border-radius: 0 !important;
+      }
+
+      body {
+        background-color: #f0f2f5;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card {
+        box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-dark:hover {
+        background-color: #343a40cc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card bg-white">
+            <div class="card-body">
+              <h3 class="text-center mb-4 font-weight-bold text-dark">
+                Welcome Back
+              </h3>
+              <!-- Error Message -->
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    value="admin"
+                    placeholder="Enter username"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    value="gaktau"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  onclick="login()"
+                  class="btn btn-dark btn-block"
+                >
+                  Sign In
+                </button>
+                <div class="text-center mt-3">
+                  <small>
+                    <a href="#">Forgot your password?</a>
+                  </small>
+                </div>
+              </form>
+            </div>
+          </div>
+          <p class="mt-4 text-center text-muted">&copy; 2025 MyApp</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Mencegah form reload
+          login();
+        });
+    </script>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

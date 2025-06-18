@@ -1,0 +1,84 @@
+<div class="container">
+  <h2 class="section-title text-center">Detail Pembelian Anda</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h4 class="mb-3">Ringkasan Pesanan Anda</h4>
+      <div id="order-summary-container">
+        <p class="text-center text-muted" id="loading-cart-message">
+          Memuat keranjang Anda...
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h4 class="mb-3">Detail Pengiriman & Pembayaran</h4>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="shippingAddress">Alamat Pengiriman Lengkap</label>
+          <textarea
+            class="form-control"
+            id="shippingAddress"
+            name="shipping_address"
+            rows="3"
+            placeholder="Jalan, Nomor Rumah, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Metode Pembayaran</label>
+          <select
+            class="form-control"
+            id="paymentMethod"
+            name="payment_method"
+            required
+          >
+            <option value="">Pilih Metode Pembayaran</option>
+            <option value="bank_transfer">Transfer Bank</option>
+            <option value="cod">Cash On Delivery (COD)</option>
+            <option value="ewallet">E-Wallet</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-checkout">
+          Konfirmasi Pesanan
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Tambahkan styling ini ke file CSS global Anda (misal: style.css) */
+  .section-title {
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  .order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .order-summary-item:last-child {
+    border-bottom: none;
+  }
+  .order-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+    margin-top: 15px;
+  }
+  .form-control {
+    margin-bottom: 15px;
+  }
+  .btn-checkout {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+</style>

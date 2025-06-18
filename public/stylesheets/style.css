@@ -1,0 +1,61 @@
+body {
+  font-size: 0.9rem;
+  background-color: #f8f9fa;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  padding-top: 56px;
+  background-color: #343a40;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.sidebar .nav-link {
+  color: #adb5bd;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  color: white;
+  background-color: #495057;
+}
+
+.card-stat {
+  border-left: 5px solid #007bff;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  margin-left: 220px;
+  transition: margin-left 0.3s;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+    z-index: 1050;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+}
