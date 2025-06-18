@@ -46,6 +46,14 @@ DB_NAME=dashboard_app
 4. Database Import
    DATABASE/bmc_db.sql
 
+
+5. Jalankan dengan perintah
+npm run dev
+
+6. Login
+   akun admin :
+   Username : admin
+   Password : gaktau
 ```
 
 ## ℹ️ Informasi
